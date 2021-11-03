@@ -1,13 +1,10 @@
-FROM beginor/ubuntu-china:16.04
+FROM ubuntu:18.04
 
-LABEL maintainer="beginor <beginor@qq.com>"
+LABEL maintainer="wjchang <447491480@qq.com>"
 
 COPY src/install.sh /tmp/
+COPY src/docker-jvm-opts.sh /
 
 RUN /tmp/install.sh
 
 VOLUME [ "/opt/datax/script" ]
-
-ENTRYPOINT [ "/opt/datax/bin/datax.py" ]
-
-CMD [ "--help" ]
