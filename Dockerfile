@@ -7,4 +7,10 @@ COPY src/docker-jvm-opts.sh /
 
 RUN /tmp/install.sh
 
+ADD src/datax-web-2.1.2.tar.gz /opt/
+
+RUN /opt/datax-web-2.1.2/bin/install.sh
+
 VOLUME [ "/opt/datax/script" ]
+
+ENTRYPOINT ["sh","/opt/datax-web-2.1.2/bin/start-all.sh"]

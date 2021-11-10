@@ -5,7 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 #sed -i "s/http:\/\/archive\.ubuntu\.com/http:\/\/mirrors\.aliyun\.com/g" /etc/apt/sources.list
 apt-get update
 apt-get upgrade -y
-apt-get install -y --no-install-recommends wget openjdk-8-jre-headless python iproute2 ca-certificates tzdata
+apt-get install -y --no-install-recommends wget openjdk-8-jre-headless python iproute2 ca-certificates tzdata mysql-server
 
 wget -q http://datax-opensource.oss-cn-hangzhou.aliyuncs.com/datax.tar.gz
 tar -zxvf datax.tar.gz
